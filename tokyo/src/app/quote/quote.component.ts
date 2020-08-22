@@ -27,6 +27,15 @@ addNewQuote(quote){
   this.Quotes.push(quote)
 
 }
+deleteQuote(isComplete,index){
+  if (isComplete){
+      let toDelete=confirm(`Are you sure you want to delete ${this.Quotes[index].name}`)
+      
+      if(toDelete){
+          this.Quotes.splice(index,1)
+      }
+  }
+}
 
   constructor() { }
 
