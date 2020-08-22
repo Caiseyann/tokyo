@@ -8,7 +8,7 @@
   </div>
 
   <div *ngFor='let quote of Quotes;let i = index'>
-      <h3 style="font-family: 'Jura', sans-serif;" id="{{i}}" appStrikethrough><strong>{{quote.name}}</strong> submitted on: {{quote.completeDate|date|uppercase}}</h3>
+      <h3  id="{{i}}" appStrikethrough><strong>{{quote.name}}</strong> submitted on: {{quote.completeDate|date|uppercase}}</h3>
       
       
       <div style="width: 130px;">  <a href="#" class="btn btn-sm animated-button thar-one" (click)='toogleDetails(i)'>TOOGLE</a> </div>
