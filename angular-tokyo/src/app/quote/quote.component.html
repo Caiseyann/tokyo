@@ -1,6 +1,5 @@
 <h1 class="quotesheader">Tokyo Quotes Generator</h1>
 
-<hr>
 
 <div style="margin-left: 15%;" class="content">
   <div class="row">
@@ -11,7 +10,7 @@
       <h3  id="{{i}}" appStrikethrough><strong>{{quote.name}}</strong> submitted on: {{quote.completeDate|date|uppercase}}</h3>
       
       
-      <div style="width: 27%;">  <a href="#" class="btn btn-sm animated-button thar-one" (click)='toogleDetails(i)' style="text-align: start;">TOOGLE</a> </div>
+      <div style="width: 27%;">  <a href="#" class="btn btn-sm animated-button thar-one" (click)='toogleDetails(i)' style="text-align: start;" class="btn btn-success">TOOGLE</a> </div>
       
       <div class="row" *ngIf="quote.showDescription" style="margin-left: 3%;">
         <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
