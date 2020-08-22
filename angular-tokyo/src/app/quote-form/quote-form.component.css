@@ -1,12 +1,8 @@
 .displaytext {
-  font-family: 'IBM Plex Mono', monospace;
   font-size: 15px;
   
 }
 
-#addquote {
-  font-family: 'Cabin Sketch', cursive;
-}
 
 .form1 {
    width: 800px;

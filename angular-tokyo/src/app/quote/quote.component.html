@@ -1,4 +1,4 @@
-<h1 class="quotesheader">My Quotes</h1>
+<h1 class="quotesheader">Tokyo Quotes Generator</h1>
 
 <hr>
 
@@ -6,16 +6,17 @@
   <div class="row">
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
-
+  <div style="background-color: #AC9090; margin-left: 5%; width: 70%;">
   <div *ngFor='let quote of Quotes;let i = index'>
       <h3  id="{{i}}" appStrikethrough><strong>{{quote.name}}</strong> submitted on: {{quote.completeDate|date|uppercase}}</h3>
       
       
-      <div style="width: 130px;">  <a href="#" class="btn btn-sm animated-button thar-one" (click)='toogleDetails(i)'>TOOGLE</a> </div>
+      <div style="width: 27%;">  <a href="#" class="btn btn-sm animated-button thar-one" (click)='toogleDetails(i)' style="text-align: start;">TOOGLE</a> </div>
       
-      <div class="row" *ngIf="quote.showDescription">
+      <div class="row" *ngIf="quote.showDescription" style="margin-left: 3%;">
         <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
       </div>
   </div>
+  </div>
 </div>
-<p *ngIf='Quotes.length> 5'>This is the End of Quotes</p>
+
