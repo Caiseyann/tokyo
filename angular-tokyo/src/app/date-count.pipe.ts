@@ -1,23 +1,24 @@
-import { Directive,ElementRef,Input,HostListener } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 
-@Directive({
-  selector: '[appStrikethrough]'
+@Pipe({
+  name: 'dateCount'
 })
-export class StrikethroughDirective {
+export class DateCountPipe implements PipeTransform {
 
-  constructor(private elem:ElementRef) {}
+  transform(value: any): number {
+    let today: Date = new Date(); 
+    let todayWithNoTime: any = new Date(today.getFullYear(), today.getMonth(), today.getDate())
+    var dateDifference = Math.abs(value - todayWithNoTime)
+    const secondsInADay = 86400; 
 
-  @HostListener("click") onClicks() {
-    this.textDeco("line-through")
+    var dateDifferenceSeconds = dateDifference * 0.001; 
+
+    var dateCounter = dateDifferenceSeconds / secondsInADay;
+
+    if (dateCounter >= 1) {
+      return dateCounter;
+    } else {
+      return 0;
+    }
   }
-
-  @HostListener("dblclick") onDoubleClicks() {
-    this.textDeco("None")
-  }
-
-  private textDeco(action: string) {
-    this.elem.nativeElement.style.textDecoration = action;
-
-  }
-
 }
