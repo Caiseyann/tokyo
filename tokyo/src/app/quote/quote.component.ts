@@ -17,6 +17,10 @@ export class QuoteComponent implements OnInit {
    new Quote(7,'-Bruce Lee', '"The successful warrior is the average man, with laser-like focus"',new Date(1998, 1, 12) ),
    new Quote(8, '-Muhammad Ali', '"Don’t count the days, make the days count"', new Date(1999, 3, 30)),
  ]
+ toogleDetails(index){
+  this.Quotes[index].showDescription =!this.Quotes[index].showDescription;
+}
+
   constructor() { }
 
   ngOnInit(): void {
