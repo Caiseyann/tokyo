@@ -45,7 +45,7 @@ This include the following mentioned however if you dont have the set below
 
 3. To get to use ** Tokyo QUOTES** fist you need to get to the Quotes-Angular repository. 
 
-Link:-> ~https://caiseyann.github.io/tokyo/~
+Link:-> https://caiseyann.github.io/tokyo/
 
 4. From there you can access Quotes.
 
